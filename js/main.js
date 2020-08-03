@@ -38,8 +38,8 @@ const uniqueColor = amount => {
     return result;
 }
 
-// generate random color
-const randomNumber = () => Math.floor(Math.random() * 10) + 1;
+// generate random number between 1 and 12
+const randomNumber = () => Math.floor(Math.random() * 12) + 1;
 
 // event handler for each individual node when pushed or popped.
 const pushPopOnClick = (node) => {
@@ -180,7 +180,7 @@ peek.addEventListener(
         messageBox.innerHTML = "";
         if (dropTarget.firstElementChild) {
             let result = dropTarget.firstElementChild.cloneNode(true);
-            result.attributes.className = "not-in-stack";
+            result.className += " peek";
             let message = "This is on top of the stack.";
             messageBox.append(message);
             messageBox.append(result);

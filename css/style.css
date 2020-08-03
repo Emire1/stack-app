@@ -133,3 +133,8 @@ button {
 .shake {
     animation: shake 0.5s;
 }
+
+.peek {
+    display: block;
+    margin: 0 auto;
+}
